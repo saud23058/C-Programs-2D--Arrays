@@ -13,26 +13,25 @@ void input(int a1[row][col]){
 
 
 
-void sum_2d(int a1[row][col],int a2[row][col],int sum[row][col]){
+void max(int a1[row][col]){
+    int lar=a1[0][0];
 	 for(int i=0; i<row ;i++){
         for(int j=0; j<col; j++){
-       sum[i][j]=a1[i][j]+a2[i][j];
-        printf("%d ",sum[i][j]);
+      if(lar<a1[i][j]){
+        lar=a1[i][j];
+      }
+      
         }
-        printf("\n");
+       
     }
+    printf("%d is larg",lar);
 }
 
 int main(){
     int a1[row][col];
-    int a2[row][col];
-    int sum[row][col];
-    printf("Enter the Elements Of first Matrix:");
+       printf("Enter the Elements Of first Matrix:");
     input(a1);
-    printf("Enter the Elements Of Second Matrix:");
-    input(a2);
-    printf("Sum of Two matixs\n");
-    sum_2d(a1,a2,sum);
+        max(a1);
 
     return 0;
 }

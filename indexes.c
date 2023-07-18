@@ -17,7 +17,7 @@ void sum_2d(int a1[row][col],int a2[row][col],int sum[row][col]){
 	 for(int i=0; i<row ;i++){
         for(int j=0; j<col; j++){
        sum[i][j]=a1[i][j]+a2[i][j];
-        printf("%d ",sum[i][j]);
+        printf("(%d,%d)",i,j);
         }
         printf("\n");
     }
